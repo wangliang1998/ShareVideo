@@ -1,0 +1,50 @@
+server:
+  port: 8888
+  maxHttpHeaderSize: 16384
+
+
+web:
+  upload-path: D:/ShareVideo/
+
+# 单个文件的最大值
+
+spring:
+  thymeleaf:
+    cache: false
+  resources:
+    static-locations: file:${web.upload-path}
+  mvc:
+    hiddenmethod:
+      filter:
+        enabled: true
+
+  datasource:
+    username: root
+    password: 928457
+    url: jdbc:mysql://localhost:3306/share_video?useSSL=false&serverTimezone=UTC&connectTimeout=60000
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+
+    #Spring Boot
+    #druid
+    initialSize: 5
+    minIdle: 5
+    maxActive: 50
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 600000
+    minEvictableIdleTimeMillis: 3600000
+    validationQuery: SELECT 1 FROM DUAL
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxPoolPreparedStatementPerConnectionSize: 20
+    useGlobalDataSourceStat: true
+    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+
+
+

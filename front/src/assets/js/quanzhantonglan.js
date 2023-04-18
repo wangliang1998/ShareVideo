@@ -1,0 +1,1 @@
+document.writeln('<span style="color:#006600;">通知1：</span><span style="color:red;">请牢记 88影视网 备用地址：88kan.tv 希望大家多多扩散转发，谢谢！</span><br/><span style="color:#006600;">通知2：</span><span style="color:red;">推荐使用谷歌浏览器，以防被浏览器拦截！<a href="https://www.google.cn/intl/zh-CN/chrome/" target="_blank">点击下载谷歌浏览器</a></span>')
